@@ -14,48 +14,34 @@
   height: 59px; /* fixed header height*/ 
 }
 
-header {
-  display: grid;  
-  grid-template-columns: 200px 1fr;     
+header { 
+  display: flex;
+  justify-content: space-between;  
   font-size: 1rem;
   font-weight: 700;  
-  text-transform: uppercase;
-  position:fixed;
-  width: 100%; 
-  background-color: white;  
-  box-shadow: 2px 2px 6px rgba(100,100,100,0.25);
+  text-transform: uppercase;  
+  width: 100%;         
   z-index: 100;
+  position:fixed;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(100,100,100,0.25);  
 }
 
 header label {
   width: 59px;
   height: 59px;   
-  position: relative;  
-  display: none;  
-}
-
-header label::after {
-  content: "+";  
-  color: rgb(56, 126, 176);
-  font-size: 3rem;  
-  position: absolute;
+  position: relative;    
+  color: black;  
+  font-size: 3rem;
   font-weight: 300;
-  top: -5px;
-  right: 10px;
+  line-height: 59px;
+  text-align: center;  
   transition: 1s;
-}
-
-input:checked ~ label::after {
-  transform: rotate(135deg);
-}
-
-input:checked ~ #navbar {
-  display: block;    
-}
-
-#menu {
-  appearance: none;
   display: none;
+}
+
+.toggle {
+  transform: rotate(135deg);
 }
 
 #logo--container {
@@ -68,14 +54,9 @@ input:checked ~ #navbar {
   max-width: 100%;
 }
 
-#navbar {    
-  width: 100%;
-  max-width: 990px;
-  text-align: center;
-  padding: 0 10px;
-  display: grid;    
-  grid-template-columns: repeat(6, auto);
-  justify-self: end;
+#navbar {      
+  text-align: center; 
+  display: flex;  
   transition: 1s;
 }
 
@@ -86,7 +67,12 @@ input:checked ~ #navbar {
   color: black;
   border-top: 4px solid transparent;  
   transition: 200ms;
-  position: relative;  
+  position: relative;
+  padding: 0 20px;  
+}
+
+#navbar a i {    
+ font-size: 1.5rem;
 }
 
 #navbar a:hover {  
@@ -109,18 +95,18 @@ input:checked ~ #navbar {
 }
 
 #hero h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin-bottom: 20px;
 }
 
 #hero h2 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 #hero h4 {
-  font-size: 1.25rem;  
+  font-size: 1.75rem;  
 }
 
 #herocontact {  
@@ -285,27 +271,27 @@ section#services {
 
 
 /* Media queries */
-@media (max-width: 820px){
+@media (max-width: 880px){
   header label {
     display: block;
     position: absolute;
     right: 0;
   }
   #navbar {
-    display: none;    
-    padding: 0;
+    flex-direction: column;    
+    position:fixed;
+    width: 200px;
+    top: 59px;
+    right: -200px;
   }
   #navbar a {  
     padding: 10px 0;
     color: white;
-    background-color: rgb(56, 126, 176);
+    background-color: rgb(56, 126, 176);        
   }
+
   #navbar a:hover {  
     border-top-color: transparent;    
-  }
-  header {
-    display: block;
-    position: relative;
   }
 
   #herocontact a {
@@ -338,16 +324,9 @@ section#services {
     text-align: center;
   }
 }
+
 @media (max-width: 920px) {
   #cards {
     gap: 20px;
-  }
-}
-@media (min-width: 821px) {
-  input:checked ~ label::after {
-    transform: rotate(0deg);
-  }  
-  input:checked ~ #navbar {
-    display: grid;
   }
 }
