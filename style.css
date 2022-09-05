@@ -36,7 +36,7 @@ header label {
   font-weight: 300;
   line-height: 59px;
   text-align: center;  
-  transition: 1s;
+  transition: 0.5s;
   display: none;
 }
 
@@ -44,7 +44,11 @@ header label {
   transform: rotate(135deg);
 }
 
-#logo--container {
+#navbar a.selected {
+  color: rgb(76, 146, 196);
+}
+
+#logo-container {
   max-width: 200px;
   padding-top: 5px;
   padding-left: 5px;
@@ -57,15 +61,14 @@ header label {
 #navbar {      
   text-align: center; 
   display: flex;  
-  transition: 1s;
+  transition: 0.5s;
 }
 
 #navbar a {    
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
-  border-top: 4px solid transparent;  
+  color: black;  
   transition: 200ms;
   position: relative;
   padding: 0 20px;  
@@ -76,7 +79,7 @@ header label {
 }
 
 #navbar a:hover {  
-  border-top-color: rgb(212,0,0);
+  color: rgb(76, 146, 196);
 }
 
 #hero * { 
@@ -109,12 +112,12 @@ header label {
   font-size: 1.75rem;  
 }
 
-#herocontact {  
+#hero-contact {  
   justify-content: center;  
   margin: 100px auto 10px auto;       
 }
 
-#herocontact a {  
+#hero-contact a {  
   padding: 10px 30px;
   font-size: 1rem;
   text-transform: uppercase; 
@@ -122,7 +125,7 @@ header label {
   transition: 200ms;
 }
 
-#herocontact a:hover {  
+#hero-contact a:hover {  
   transform: scale(1.1);
 }
 
@@ -136,7 +139,7 @@ header label {
   background-color: rgb(66, 135, 245);
 }
 
-#herocontact a i {
+#hero-contact a i {
   margin-left: 20px;
   font-size: 1.3rem;
 }
@@ -207,7 +210,7 @@ section#services {
   margin-bottom: 2rem;
 }
 
-#aboutcontainer {
+#about-container {
   display: grid;
   grid-template-columns: repeat(2, 50%);  
   align-items: center;
@@ -215,15 +218,15 @@ section#services {
   margin: auto;
 }
 
-#imgcontainer img {
+#img-container img {
   max-width: 100%;
 }
 
-#textcontainer strong {
+#text-container strong {
   color: white;
 }
 
-#textcontainer p {
+#text-container p {
   color: white;
   margin-bottom: 0.5rem;
   line-height: 1.3;  
@@ -235,26 +238,26 @@ section#services {
   text-align: center;
 }
 
-#flotacontent {
+#flota-content {
   max-width: 1200px;
   margin: auto;
 }
 
-#flotacontent h1 {  
+#flota-content h1 {  
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-#flotacontent p {
+#flota-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
 
-#flotaimage {
+#flota-image {
   padding: 2rem;
 }
 
-#flotaimage img {
+#flota-image img {
   max-width: 100%;
 }
 
@@ -265,7 +268,7 @@ section#services {
   text-align: center;
 }
 
-#contactcontent {
+#contact-content {
   max-width: 1200px;  
 }
 
@@ -294,7 +297,7 @@ section#services {
     border-top-color: transparent;    
   }
 
-  #herocontact a {
+  #hero-contact a {
     display: block;
     width: 250px;
     margin-left: auto;
@@ -315,11 +318,11 @@ section#services {
     grid-template-columns: 1fr;
   }
 
-  #imgcontainer {
+  #img-container {
     display: none;
   }
 
-  #aboutcontainer {
+  #about-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
