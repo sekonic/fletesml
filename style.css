@@ -8,10 +8,8 @@
   text-decoration: none;   
 }
 
-:target::before {
-  content: "";
-  display: block;
-  height: 59px; /* fixed header height*/ 
+html {
+  scroll-behavior: smooth;
 }
 
 header { 
@@ -82,6 +80,10 @@ header label {
   color: rgb(76, 146, 196);
 }
 
+section[id] {
+  scroll-margin-top: 57px;
+}
+
 #hero * { 
   color: white;
   text-align: center;
@@ -118,7 +120,7 @@ header label {
 }
 
 #hero-contact a {  
-  padding: 10px 30px;
+  padding: 15px 30px;
   font-size: 1rem;
   text-transform: uppercase; 
   border-radius: 10px;  
