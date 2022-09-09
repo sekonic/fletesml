@@ -16,9 +16,6 @@ links.forEach((link) => {
     if (flowDirection === 'column') {
       navbar.style.right = "-200px";
       iconMenu.classList.toggle('toggle');
-    } else {
-      links.forEach((l) => l.classList.remove('selected'));
-      link.classList.add('selected');      
-    }   
+    }
   });
 });
