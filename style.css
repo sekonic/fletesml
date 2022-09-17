@@ -130,8 +130,11 @@ header label {
   padding: 15px 30px;
   font-size: 1rem;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 100px;
   transition: 200ms;
+  font-weight: 700;
+  display: inline-block;
+  border: 3px white solid;
 }
 
 #hero-contact a:hover {
@@ -140,12 +143,14 @@ header label {
 
 #ws {
   margin: 10px;
-  background-color: rgb(54, 189, 73);
+  background-color: rgb(38,135,51);
+  
 }
 
 #tel {
   margin: 10px;
-  background-color: rgb(66, 135, 245);
+  background-color: rgb(39, 90, 124);
+ 
 }
 
 #hero-contact a i {
@@ -198,7 +203,7 @@ section#services {
 
 #about {
   background-color: rgb(240, 240, 240);
-  background-color: rgb(56, 126, 176);
+  background-color: rgb(39, 90, 124);
   padding: 50px 0;
 }
 
@@ -241,11 +246,6 @@ section#services {
   margin: auto;
 }
 
-/* #flota-content h1 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-} */
-
 #flota-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
@@ -267,6 +267,7 @@ section#services {
 }
 
 #contact-container {
+  font-size: 1.25rem;
   max-width: 1200px;
   margin: auto;
   padding: 0px 35px;
@@ -306,6 +307,7 @@ section#services {
 }
 
 footer {
+  font-size: 0.75rem;
   text-align: center;
   padding: 10px;
   color: white;
@@ -325,12 +327,12 @@ footer {
     width: 200px;
     top: 58px;
     right: -200px;
-    background-color: rgb(250,250,250);
+    background-color: white;
   }
   #navbar a {
     padding: 10px 0;
     color: white;
-    background-color: rgb(56, 126, 176);
+    background-color: rgb(39, 90, 124);
   }
 
   #navbar a:hover {
@@ -352,7 +354,7 @@ footer {
     font-size: 1.25rem;
   }
 
-  #hero h4 {
+  #hero h3 {
     font-size: 1rem;
   }
 
